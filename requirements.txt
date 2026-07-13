@@ -1,2 +1,9 @@
-aws-cdk-lib>=2.261.0,<3.0.0
-constructs>=10.5.0,<11.0.0
+aws-cdk-lib>=2.100.0
+constructs>=10.0.0
+
+# CDK Pipelines
+aws-cdk.aws-codepipeline-actions
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
