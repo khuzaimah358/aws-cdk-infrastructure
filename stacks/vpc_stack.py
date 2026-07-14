@@ -23,9 +23,9 @@ class VpcStack(cdk.Stack):
         self.vpc = ec2.Vpc(
             self, 'AppVpc',
             vpc_name=f'myapp-{environment}-vpc',
-            max_azs=2,
             availability_zones=['us-east-1a', 'us-east-1b'], # Explicitly set AZs to bypass DescribeAvailabilityZones
             nat_gateways=1,   # 1 NAT saves cost (use 2 in prod)
+
             ip_addresses=ec2.IpAddresses.cidr('10.0.0.0/16'),
             subnet_configuration=[
                 # Public — internet-facing resources
