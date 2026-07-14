@@ -34,11 +34,11 @@ class PipelineStack(cdk.Stack):
         # SOURCE — GitHub Connection
         # ════════════════════════════════════════════════
         source = CodePipelineSource.connection(
-            'khuzaimah358/aws-cdk-infrastructure', 
+            'khuzaimah358/aws-cdk-infrastructure',
             'main',
             connection_arn=(
-                'arn:aws:codestar-connections:'
-                'us-east-1:077058346138:connection/53ce166e-d514-4c7f-9c87-38c80af06c15'  
+                'arn:aws:codeconnections:'
+                'us-east-1:077058346138:connection/53ce166e-d514-4c7f-9c87-38c80af06c15'
             ),
         )
 
