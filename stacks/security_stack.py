@@ -33,7 +33,6 @@ class SecurityStack(cdk.Stack):
         # Database credentials (auto-generated password)
         self.db_secret = secretsmanager.Secret(
             self, 'DbSecret',
-            secret_name=f'/myapp/{environment}/database/credentials',
             description=f'RDS PostgreSQL credentials for {environment}',
             generate_secret_string=secretsmanager.SecretStringGenerator(
                 secret_string_template='{"username": "dbadmin"}',
@@ -46,7 +45,6 @@ class SecurityStack(cdk.Stack):
         # API Secret Key (for JWT signing etc.)
         self.api_secret = secretsmanager.Secret(
             self, 'ApiSecret',
-            secret_name=f'/myapp/{environment}/api/secret-key',
             description=f'API secret key for {environment}',
             generate_secret_string=secretsmanager.SecretStringGenerator(
                 password_length=64,

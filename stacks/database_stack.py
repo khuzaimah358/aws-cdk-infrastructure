@@ -76,7 +76,6 @@ class DatabaseStack(cdk.Stack):
             # Credentials (uses Secrets Manager auto-generation)
             credentials=rds.Credentials.from_generated_secret(
                 username='dbadmin',
-                secret_name=f'/myapp/{environment}/database/credentials',
             ),
 
             # Safety
