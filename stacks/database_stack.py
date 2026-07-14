@@ -49,7 +49,7 @@ class DatabaseStack(cdk.Stack):
 
             # Engine: PostgreSQL 15
             engine=rds.DatabaseInstanceEngine.postgres(
-                version=rds.PostgresEngineVersion.VER_15_3,
+                version=rds.PostgresEngineVersion.VER_15,
             ),
 
             # Size
