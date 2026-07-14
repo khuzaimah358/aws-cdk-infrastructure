@@ -39,8 +39,6 @@ class ApiStack(cdk.Stack):
             description=f'MyApp REST API - {environment}',
             deploy_options=apigw.StageOptions(
                 stage_name=environment,
-                logging_level=apigw.MethodLoggingLevel.INFO,
-                data_trace_enabled=(environment != 'prod'),
                 throttling_rate_limit=1000,
                 throttling_burst_limit=500,
             ),
